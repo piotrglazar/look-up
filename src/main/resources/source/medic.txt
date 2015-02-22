@@ -1,0 +1,423 @@
+% of recommended daily allowances (RDAs) ; % zalecanego spożycia dziennego
+3 times daily ; trzy razy dziennie
+abdominal pain ; bóle brzucha
+absorption ; absorpcja
+absorption of medication ; absorbcja leku
+access to public information ; dostęp do informacji publicznej
+accidental overdose ; przypadkowe przedawkowanie
+acetylcholine ; acetylocholina
+acetylcholinesterase ; acetylocholinoesteraza
+acrylic matrix ; macierz akrylowa
+acrylic polymer ; polimer akrylowy
+active drug ; lek aktywny
+activities of daily living ; czynności dnia codziennego
+Address of Manufacturer ; Adres producenta
+adhesive ; substancja przylepna
+adverse events ; zdarzenia niepożądane
+adverse reactions ; reakcje niepożądane
+affinity ; powinowactwo
+age-related macular degeneration ; związana z wiekiem degeneracja plamki (AMD)
+aging and its natural process ; naturalny proces starzenia
+allergia ; alergia
+Alzheimer's disease ; choroba Alzheimera
+amended legal state ; znowelizowany stan prawny
+anatomic site ; region anatomiczny
+anemia ; niedokrwistość
+anorexia ; brak łaknienia anoreksja
+anticholinergic medications ; leki o działaniu antycholinergicznym
+anticholinergic precautions ; środki ostrożności związane z działaniem antycholinergicznym
+anti-oxidant ; o działaniu antyoksydacyjnym
+anxiety ; zaburzenia lękowe
+arthralgia ; bóle stawów
+as directed by your doctor ; według zaleceń lekarza
+asthenia ; astenia
+asthma ; astma
+atropine ; atropina
+attention ; koncentracja uwagi
+attention deficit hyperactivity disorder ; zespół nadpobudliwości ruchowej z deficytem uwagi
+available dosage forms and strenghts ; dostępne postaci oraz wielkości dawek
+balanced diet ; zrównoważona dieta
+bi-layer matrix ; macierz dwuwarstwowa
+binding legal order ; obowiązujący porządek prawny
+bioavailability ; biodostępności
+biological properties ; właściwości biologiczne
+black iron oxide ; czerwony tlenek żelaza
+blood and lymphatic system disorders ; choroby krwi i układu limfatycznego
+body ; organizm
+body's cells ; komórki organizmu
+breast-feeding ; karmienie piersią
+bring to legal justice ; pociągnięcie do odpowiedzialności prawnej
+Business Unit ; BU dział
+calcium supplements ; suplementacja wapnia
+capsule formulation ; postać w kapsułkach
+carbamate ; karbaminian
+Carbohydrates ; Węglowodany
+cardiac muscle ; mięsień sercowy
+caregiver ; opiekun
+carotenoids ; karotenoidy
+central vision ; widzenie centralne
+chest ; klatka piersiowa
+chest pain ; bóle w klatce piersiowej
+cholinesterase inhibitor ; inhibitor cholinoesterazy
+chronic ; przewlekła
+climetidine ; cymetydyna
+clinical studies ; badania kliniczne
+cognitive functioning ; funkcje poznawcze
+colored backing ; kolorowa warstwa zewnętrzna
+colour ; barwnik
+common adverse reactions ; najczęstsze reakcje niepożądane
+comorbid conditions ; schorzenia towarzyszące
+components of the formulation ; składniki leku
+Composition ; Skład
+compromising ; upośledzający
+concentration gradient ; gradient stężeń
+conduction defects ; zaburzenia przewodzenia
+constant rate ; stała prędkość
+constipation ; zaparcia
+continuous drug delivery ; ciągłe dostarczanie leku
+contraception ; antykoncepcja
+contraindications ; przeciwwskazania
+controlled clinical trial ; kontrolowane badanie kliniczne
+copolymer ; kopolimer
+copper ; miedź
+corporate citizenship ; obywatelstwo korporacyjne/korporacyjna polityka obywatelska
+current medical knowledge ; aktualna wiedza medyczna
+daily nutrition ; codzienna dieta
+daily tasks ; codzienne zadania
+death ; zgon
+decreased appetite ; spadek łaknienia
+degenerative disorder ; choroba zwyrodnieniowa
+dehydration ; odwodnienie
+dementia of Parkinson's disease ; otępienie w przebiegu choroby Parkinsona
+dementia of the Alzheimer's type ; otępienie typu alzheimerowskiego
+dense macula lutea ; plamka gęsta
+depression ; depresja
+derivatives ; pochodne
+dermatitis ; zapalenie skóry
+dermis ; skóra właściwa
+design and technology ; projekt i technologia
+deterioration of intellectual faculties ; osłabienie zdolności intelektualnych
+detrimental to driving and/or the ability to operate machinery ; upośledzające zdolność prowadzenia pojazdów i/lub obsługi maszyn
+diabetes mellitus ; cukrzyca
+diagnostic criteria ; kryteria diagnostyczne
+diarrhea ; biegunki
+difficulties passing urine ; trudności w oddawaniu moczu
+diglycerides of fatty acids ; dwuglicerydy kwasów tłuszczowych
+disease condition ; stan chorobowy
+disease conditions ; stany chorobowe
+distribution ; dystrybucja
+diverticulitis ; zapalenie uchyłków
+dizziness ; zawroty głowy
+docosahexaenoic acid ; kwas dokozaheksaenowy
+dosage and administration ; dawkowanie oraz sposób podawania
+double-blind ; prowadzone metodą podwójnie ślepej próby
+double-dummy ; podwójnie pozorowane
+draft amendment ; projekt zmiany ustawy
+drug delivery ; dostarczanie leku
+drug interactions ; interakcje międzylekowe
+muscle tremor ; drżenie mięśni
+duodenal ulcer ; choroba wrzodowa dwunastnicy
+dyspepsia ; dyspepsja
+early-stage Parkinson's disease ; wczesne stadia choroby Parkinsona
+eczema ; wyprysk
+efficacy and safety ; skuteczność i bezpieczeństwo
+eicosapentaenoic acid ; kwas eikozapentaenowy
+elderly ; w podeszłym wieku
+electricity currents ; impulsy elektryczne
+elimination ; eliminacja
+emulsifier ; emulgator
+endodermis ; skóra wewnętrzna
+Energentic Value ; Wartość energetyczna
+epidermis ; naskórek
+epilepsy ; padaczka
+erythema ; rumień
+esophageal rupture ; pęknięcie przełyku
+ester ; ester
+evaluation of the lawfulness ; analiza legalności
+exacerbation ; nasilenie
+executive function ; funkcje wykonawcze
+exposure levels ; poziomy ekspozycji
+extended release oral formulations ; leki podawane drogą doustną o przedłużonym uwalnianiu
+extrapyramidal symptoms ; objawy pozapiramidowe
+eye health ; zdrowie narządu wzroku
+eyes ; narząd wzroku
+fatigue ; uczucie zmęczenia
+Fats ; Tłuszcze
+firming agent ; substancja utwardzająca
+first-pass effect ; efekt pierwszego przejścia
+fish oil ; olej rybny
+food intake ; spożywane pokarmy
+Food Supplement ; Suplement diety
+free radicals ; wolne rodniki
+gastric ulcers ; choroba wrzodowa żołądka
+gastritis ; zapalenie błony śluzowej żołądka
+gastroesophageal reflux disease ; choroba refluksowa przełyku
+gastrointestinal side effects ; działania uboczne ze strony przewodu pokarmowego
+gastrointestinal system ; układ pokarmowy
+gastrointestinal tract ; przewód pokarmowy
+gelatin ; żelatyna
+general disorders ; ogólne zaburzenia
+geriatric neurologist ; neurolog-geriatra
+gland cells ; komórki gruczołów
+glycerol ; glicerol
+greater compliance ; lepsze stosowanie się do zaleceń
+greater efficacy ; wyższa skuteczność
+gut wall ; ściana jelita
+hair loss ; wypadanie włosów
+headache ; bóle głowy
+health care services ; świadczenia opieki zdrowotnej
+healthcare provider ; pracownik służby zdrowia
+healthcare providers ; pracownicy służby zdrowia
+healthy lifestyle ; zdrowy tryb życia
+healthy volunteers ; zdrowi ochotnicy
+heart rythm disorder ; zaburzenie rytmu serca
+hematemesis ; krwiste wymioty
+hematochezia ; obecność krwi w kale
+hematuria  ; krwiomocz
+high intake ; spożywanie dużych ilości
+hip fracture ; złamanie kości udowej
+hormone replacement therapy ; hormonalna terapia zastępcza
+hydrophilic molecules ; cząsteczki hydrofilne
+hydrophilic properties ; właściwości hydrofilne
+hydrophilicity ; hydrofilność
+hyperlipidermia ; hiperlipidermia
+hyperpyrexia ; gorączka
+hypersensitiveness ; nadwrażliwość
+hypersensitivity ; nadwrażliwość
+hypnotics ; substancje o działaniu nasennym
+hypodermis ; tkanka podskórna
+hypokalemia ; hiperkaliemia
+hyponatremia ; hiponatremia
+impaired function ; nieprawidłowa czynność
+impaired gastric function ; nieprawidłowa czynność żołądka
+impaired liver function ; nieprawidłowa czynność wątroby
+impairment in executive function ; zaburzenia funkcji wykonawczych
+increasing heart rate ; przyspieszona czynność serca
+infection ; infekcja
+infestation ;  zakażenie
+inflammation in the stomach ;stan zapalny zlokalizowany w żołądku
+inflammatory stress ; stres zapalny
+injury ; zranienie
+insecticides ; substancje o działaniu insektobójczym
+insomnia ; zaburzenia snu
+irregular heartbeat ; nieregularna czynność serca
+itching ; swędzenie
+keep out of reach ; przechowywać poza zasięgiem
+key nutrients ; kluczowe składniki odżywcze
+key role ; kluczowa rola
+laboratory values ; wyniki badań laboratoryjnych
+lack of facial expresion ; brak ekspresji mimicznej
+language ; język
+latest scientific research ; najnowsze badania naukowe
+Law Office ; Kancelaria Prawna
+lawfulness ; legalność
+leading cause ; wiodąca przyczyna
+leaflet ;ulotka informacyjna
+learning system ; materiały szkoleniowe
+Legal Advisor’s Office ; Kancelaria Radców Prawnych
+legal opinion ; opinia prawna
+lipophilic molecules ; cząsteczki lipofilne
+lipophilic properties ; właściwości lipofilne
+lipophilicity ; lipofilność
+List of Ingredients ; Lista składników
+liver ; wątroba
+local reactions ; reakcje miejscowe
+long chain ; długołańcuchowe
+loss of intellectual faculties ; utrata zdolności intelektualnych
+low body weight ; niska masa ciała
+lowest laily dose ; najniższa dawka dobowa
+lutein ; luteina
+macula ; plamka
+macula lutea of the eye ; plamka żółta oka
+maintenance dose ; dawka podtrzymująca
+matrix patch ;plaster macierzowy
+matrix transdermal system ; system macierzowy przezskórnego dostarczania leku
+maximal concentration ; maksymalne stężenie
+medical environment ; środowisko lekarskie
+medical experiment ; eksperyment medyczny
+medicinal experiment ; eksperyment leczniczy
+medicinal product ; produkt leczniczy
+Medicinal Product Characteristic ; Charakterystyka Produkty Leczniczego
+memory ; pamięć
+memory retrieval ; funkcja przypominania
+metabolic disorders ;zaburzenia metaboliczne
+metabolism ; metabolizm
+method of use ; metoda stosowania
+migraine ; migrenowe bóle głowy
+mild dementia ; otępienie w stopniu łagodnym
+mild in severity ; o umiarkowanym stopniu nasilenia
+mild reactions ; reakcje łagodne
+mild severity ; łagodne nasilenie
+mild to moderate AD ; choroba Alzheimera w stopniu łagodnym do umiarkowanego
+mild to moderate dementia ; otępienie w stopniu łagodnym do umiarkowanego
+minerals ; minerały
+Ministry of Health ; Ministerstwo Zdrowia
+mode of administration ; droga przyjmowania
+moderate dementia ; otępienie w stopniu umiarkowanym
+moderate reactions ; reakcje umiarkowane
+moderate severity ; nasilenie umiarkowane
+molecular weight ; masa cząsteczkowa
+monoglycerides of fatty acids ; monoglicerydy kwasów tłuszczowych
+motion sickness ; choroba lokomocyjna
+muscarinic receptor antagonist ; antagonista receptorów muskarynowych
+muscarinic receptors ; receptory muskarynowe
+muscle relaxants ; leki zwiotczające mięśnie
+muscle rigidity ; sztywność mięśni
+muscle spasms ; skurcze mięśni
+musculoskeletal and connective tissue disorders ; zaburzenia ze strony układu mięśniowego i tkanki łącznej
+myalgia ; bóle mięśni
+nasopharyngitis ; zapalenie jamy nosowej i gardła
+National Health Fund ; Narodowy Fundusz Zdrowia
+natural defense mechanisms ; naturalne mechanizmy obronne
+nausea ; nudności
+nervous system disorders ; zaburzenia ze strony układu nerwowego
+neurons ; neurony
+neurotransmission ; neuroprzewodnictwo
+nitroglycerin ; nitrogliceryna
+nocturia ; nykturia
+nominal dose ; dawka nominalna
+not smoking ; zaniechanie palenia
+Novartis Group Executive Committee ; Zarząd
+nutrients ; składniki odżywcze
+nutritional disorders ; zaburzenia odżywiania
+obstructive pulmonary disease ; obturacyjna choroba płuc
+official interpretation ; oficjalna wykładnia
+official standpoint ; oficjalne stanowisko
+omega 3 fatty acids ; kwasy tłuszczowe omega-3
+optimal doses ; dawki optymalne
+oral dose ; dawka doustna
+oral medications ; leki podawane drogą doustną
+oral solution ; roztwór doustny
+orally administered medications ; leki podawane doustnie
+organic brain disease ; organiczna choroba mózgu
+orientation ; orientacja
+original package ; oryginalne opakowanie
+oxidative stress ; stres oksydacyjny
+pancreatitis ; zapalenie trzustki
+parkinsonism ; parkinsonizm
+patients with AD ; pacjenci z chorobą Alzheimera
+peak ; szczyt
+peak-trough fluctuations ; wahanie stężenia leku
+peptic ulcer ; wrzody trawienne
+peripheral edema ; obrzęki obwodowe
+pharmaceutical market ; rynek farmaceutyczny
+pharmacist ; farmaceuta
+pharmacocinetic benefits ; korzyści farmakokinetyczne
+pharmacokinetic parameters ; parametry farmakokinetyczne
+pharmacokinetic profile ; profil farmakokinetyczny
+pharmacokinetic rationale ; uzasadnienie farmakokinetyczne
+pharmacokinetics ; farmakokinetyka
+photoreceptor cells ; komórki fotoreceptorowe
+physical barrier ; bariera fizyczna
+physiochemical properties ; właściwości fizykochemiczne
+pill burden ; liczba przyjmowanych tabletek
+plasma concentrations ; stężenie leku w osoczu
+plastic release liner ; plastikowa warstwa ochronna
+pneumonia ; zapalenie płuc
+poisoning ; zatrucie
+polimeric matrix ; macierz polimerowa
+pollakiuria ;częste oddawanie moczu
+polymeric membrane ; błona polimerowa
+polyunsaturated ;wielonienasycone
+potent molecule ; cząsteczka o silnym działaniu
+potential advantages ; potencjalne korzyści
+potential side effects ; potencjalne działania uboczne
+Practical Implementation Recommendations for Corporate  Citizenship in Third Party Relations ; zalecenia dot. stosowania zasad  polityki  obywatelskiej w kontaktach z partnerami
+praxis  ; wykonywanie czynności
+pregnancy ; ciąża
+pregnant or lactating women ; kobiety w ciąży lub w okresie laktacji
+primary care physisian ; lekarz podstawowej opieki zdrowotnej
+procedural complications ; powikłania zabiegów
+procedure of administering ; procedura stosowania
+progressive dementia syndrome ; objawy postępującego otępienia
+protective liner ; warstwa ochronna
+Proteins ; Białko
+pruritus ; świąd
+public funds ; środki publiczne
+randomized ; randomizowane
+rash erythematous ; wysypka rumieniowata
+rate of release ; prędkość uwalniania
+rationale ; uzasadnienie stosowania
+reaction against ; przeciwdziałanie
+reasoning power ; zdolność rozumowania
+recommended daily allowances ; zalecane spożycie dzienne (RDAs)
+recommended dose ; zalecana dawka
+red iron oxide ; czarny tlenek żelaza
+redness ; zaczerwienienie
+reduction in side effects ; redukcja działań ubocznych
+registration indications ; wskazania rejestracyjne
+regular exercise ; regularny wysiłek fizyczny
+release of drug ; uwalnianie leku
+renal disorders ; zaburzenia ze strony nerek
+renal failure ; niewydolność nerek
+reservoir transdermal system ; system rezerwuarowy przezskórnego dostarczania leku
+respiratory diseases ; choroby układu oddechowego
+retina ; siatkówka
+rivastigmine ; rywastygmina
+salivary hypersecretion ; nadmierne wydzielanie śliny
+scopolamine ; skopolamina
+sealed pouch ; zamknięta saszetka
+secondary afficacy outcomes ; drugorzędowe parametry oceny skuteczności
+seizures ; napady drgawek
+sequelae ; następstwa
+serious sequelae ; poważne następstwa
+sertraline ; sertralina
+sick sinus syndrome ; zespół chorej zatoki
+side effects ;działania niepożądane
+side effects zone ; strefa działań ubocznych
+silicone layer ; warstwa silikonowa
+skin disorders ; zaburzenia ze strony skóry
+skin irritation ; podrażnienia skóry
+skin ulcer ; owrzodzenia skóry
+slow voluntary movement ; spowolnienie ruchów dowolnych
+slowing heart rate ;zwolniona czynność serca
+small intestine ; jelito cienkie
+smoking cessation ; rzucanie palenia
+smooth muscle ; mięśnie gładkie
+softgel capsules ; miękkie kapsułki żelowe
+soybean lecithin ; ecytyna sojowa
+sól ; salt
+special care ; szczególna ostrożność
+statistical significance ; istotność statystyczna
+statistically significant ;statystycznie znamienne
+subcutaneous tissue disorders ; zaburzenia ze strony tkanki podskórnej
+subdural hematoma ; krwiak podtwardówkowy
+subtherapautic levels ; poziom subterapeutyczny
+succinylcholine ; sukcynylocholina
+superior tolerability ; lepsza tolerancja
+swelling ; obrzęk
+swelling of the airways ; obrzęk dróg oddechowych
+synaptic clefts ; szczelina synaptyczna
+systemic circulation ; krążenie ogólnoustrojowe
+therapeutic window ; okno terapeutyczne
+thickener ; zagęszczacz
+thinking ; myślenie
+titration regimen ; schemat zwiększania dawki
+tolerability ; tolerancja
+transdermal delivery system ; system przezskórnego dostarczania leku
+transdermal patches ; plastry przezskórne
+transdermal system ; system przezskórny
+treatment ; leczenie
+tremor ; drżenia
+trough ; spadek
+twice daily ; dwa razy dziennie
+uncontrollable movements ; niekontrolowane ruchy
+unsatisfactory therapeutic effect ; niezadowalający efekt terapeutyczny
+upper arm ;górna część ramienia
+upper back ; górne części pleców
+urethane ; uretan
+urinary incontinence ; nietrzymanie moczu
+vinyl layer ; warstwa winylowa
+visuospatial function ; orientacja wzrokowo-przestrzenna
+vital functions ; funkcje życiowe
+Vitamin C ; witamina C
+Vitamin E ; witamina E
+vitamin preparations ; preparaty witaminowe
+vitamins ; witaminy
+vomiting ; wymioty
+warnings and precautions ; ostrzeżenia i środki ostrożności
+weight loss ; spadek masy ciała
+well-balanced diet ; dobrze zbilansowana dieta
+zeaxanthin ; zeaksantyna
+zero-order pharmacokinetics ; farmakokinetyka zerowego rzędu
+zinc ; cynk

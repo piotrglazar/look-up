@@ -26,6 +26,12 @@ repositories {
 }
 
 dependencies {
+    // lucene
+    compile("org.apache.lucene:lucene-core:4.10.3")
+    compile("org.apache.lucene:lucene-queries:4.10.3")
+    compile("org.apache.lucene:lucene-analyzers-common:4.10.3")
+    compile("org.apache.lucene:lucene-queryparser:4.10.3")
+    compile("com.google.guava:guava:18.0")
     // context
     compile("org.springframework:spring-context:4.1.4.RELEASE")
     // context-support
@@ -114,4 +120,8 @@ jar {
     manifest {
         attributes 'Main-Class': 'com.piotrglazar.lookup.LookUp'
     }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
