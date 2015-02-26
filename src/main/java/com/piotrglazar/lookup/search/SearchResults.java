@@ -1,9 +1,11 @@
 package com.piotrglazar.lookup.search;
 
+import com.google.common.base.Objects;
+
 import javax.annotation.concurrent.Immutable;
 
 @Immutable
-public final class SearchResults {
+public final class SearchResults implements Comparable<SearchResults> {
 
     private final int index;
     private final String english;
@@ -35,5 +37,30 @@ public final class SearchResults {
 
     public float getScore() {
         return score;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(index, english, polish, score);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        final SearchResults other = (SearchResults) obj;
+        return Objects.equal(this.index, other.index)
+                && Objects.equal(this.english, other.english)
+                && Objects.equal(this.polish, other.polish)
+                && Objects.equal(this.score, other.score);
+    }
+
+    @Override
+    public int compareTo(SearchResults that) {
+        return Float.compare(this.score, that.score);
     }
 }

@@ -212,7 +212,7 @@ latest scientific research ; najnowsze badania naukowe
 Law Office ; Kancelaria Prawna
 lawfulness ; legalność
 leading cause ; wiodąca przyczyna
-leaflet ;ulotka informacyjna
+leaflet ; ulotka informacyjna
 learning system ; materiały szkoleniowe
 Legal Advisor’s Office ; Kancelaria Radców Prawnych
 legal opinion ; opinia prawna
@@ -323,7 +323,7 @@ potent molecule ; cząsteczka o silnym działaniu
 potential advantages ; potencjalne korzyści
 potential side effects ; potencjalne działania uboczne
 Practical Implementation Recommendations for Corporate  Citizenship in Third Party Relations ; zalecenia dot. stosowania zasad  polityki  obywatelskiej w kontaktach z partnerami
-praxis  ; wykonywanie czynności
+praxis ; wykonywanie czynności
 pregnancy ; ciąża
 pregnant or lactating women ; kobiety w ciąży lub w okresie laktacji
 primary care physisian ; lekarz podstawowej opieki zdrowotnej

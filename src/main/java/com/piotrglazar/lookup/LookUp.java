@@ -1,21 +1,12 @@
 package com.piotrglazar.lookup;
 
-import com.piotrglazar.lookup.configuration.ApplicationConfiguration;
-import com.piotrglazar.lookup.search.UserInputSearcher;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.IOException;
+@SpringBootApplication
+public class LookUp {
 
-public final class LookUp {
-
-    private LookUp() {
-        // Utility class
-    }
-
-    public static void main(String[] args) throws IOException {
-        final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
-
-        final UserInputSearcher userInputSearcher = context.getBean(UserInputSearcher.class);
-        userInputSearcher.search();
+    public static void main(String[] args) {
+        SpringApplication.run(LookUp.class, args);
     }
 }
