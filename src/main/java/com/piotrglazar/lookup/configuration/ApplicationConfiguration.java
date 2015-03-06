@@ -36,7 +36,7 @@ public class ApplicationConfiguration {
         return propertiesFactoryBean;
     }
 
-    public Version version() {
+    public static Version version() {
         return LUCENE_4_10_3;
     }
 

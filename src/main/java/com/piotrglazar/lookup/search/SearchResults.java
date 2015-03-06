@@ -1,5 +1,6 @@
 package com.piotrglazar.lookup.search;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 import javax.annotation.concurrent.Immutable;
@@ -62,5 +63,15 @@ public final class SearchResults implements Comparable<SearchResults> {
     @Override
     public int compareTo(SearchResults that) {
         return Float.compare(this.score, that.score);
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("index", index)
+                .add("english", english)
+                .add("polish", polish)
+                .add("score", score)
+                .toString();
     }
 }

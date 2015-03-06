@@ -1,11 +1,11 @@
 package com.piotrglazar.lookup.search;
 
 import com.piotrglazar.lookup.configuration.FilePathResolver;
+import com.piotrglazar.lookup.configuration.IndexWriterConfigFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.search.IndexSearcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 @Component
 public class LookUpIndex {
@@ -24,32 +25,38 @@ public class LookUpIndex {
     private static final Logger LOG = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     private final FilePathResolver filePathResolver;
-    private final IndexWriterConfig indexWriterConfig;
+    private final IndexWriterConfigFactory indexWriterConfigFactory;
     private final IndexFeeder indexFeeder;
     private IndexSearcher indexSearcher;
 
     @Autowired
-    public LookUpIndex(FilePathResolver filePathResolver, IndexWriterConfig indexWriterConfig, IndexFeeder indexFeeder) {
+    public LookUpIndex(FilePathResolver filePathResolver, IndexWriterConfigFactory indexWriterConfigFactory, IndexFeeder indexFeeder) {
         this.filePathResolver = filePathResolver;
-        this.indexWriterConfig = indexWriterConfig;
+        this.indexWriterConfigFactory = indexWriterConfigFactory;
         this.indexFeeder = indexFeeder;
     }
 
     @PostConstruct
     public void buildIndexFromSource() {
         if (indexIsEmpty()) {
-            final IndexWriter indexWriter = getIndexWriter(filePathResolver, indexWriterConfig);
-
-            indexFeeder.feed().forEach(document -> addDocumentToIndex(indexWriter, document));
-
-            closeIndex(indexWriter);
+            addToIndex(indexFeeder.feed());
+        } else {
+            this.indexSearcher = buildSearchIndex();
         }
+    }
+
+    public void addToIndex(List<Document> documents) {
+        final IndexWriter indexWriter = getIndexWriter(filePathResolver, indexWriterConfigFactory);
+
+        documents.forEach(document -> addDocumentToIndex(indexWriter, document));
+
+        closeIndex(indexWriter);
         this.indexSearcher = buildSearchIndex();
     }
 
-    private IndexWriter getIndexWriter(FilePathResolver filePathResolver, IndexWriterConfig indexWriterConfig) {
+    private IndexWriter getIndexWriter(FilePathResolver filePathResolver, IndexWriterConfigFactory indexWriterConfigFactory) {
         try {
-            return new IndexWriter(filePathResolver.getIndexFsDirectory(), indexWriterConfig);
+            return new IndexWriter(filePathResolver.getIndexFsDirectory(), indexWriterConfigFactory.indexWriterConfig());
         } catch (IOException e) {
             throw new IllegalStateException("Failed to open index writer", e);
         }

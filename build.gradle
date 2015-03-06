@@ -86,6 +86,9 @@ jacocoTestReport {
 
 sonarRunner {
     toolVersion = '2.4'
+    sonarProperties {
+        property "sonar.exclusions", "src/main/resources/static/js/*.js"
+    }
 }
 
 sourceCompatibility = 1.8
