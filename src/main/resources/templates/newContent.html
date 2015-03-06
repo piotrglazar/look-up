@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shards/head :: head"></head>
+<body>
+<div>
+    <div th:replace="shards/navbar :: navigation"></div>
+    <div class="container">
+    <form role="form" id="newContent" th:action="@{/newContent}" method="post" th:object="${newContentForm}">
+        <div class="form-group">
+            <label for="separator">Separator</label>
+            <input class="form-control" type="text" id="separator" th:field="*{separator}"/>
+        </div>
+        <div class="form-group">
+            <label for="content">New content</label>
+            <textarea class="form-control" id="content" cols="50" rows="30" placeholder="Choose separator and provide new data" th:field="*{newContent}"></textarea>
+        </div>
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="submit">Go!</button>
+        </span>
+    </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<nav class="navbar navbar-default" th:fragment="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/search}">Look up</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li th:class="${#httpServletRequest.servletPath == '/search'} ? 'active' : ''"><a href="#" th:href="@{/search}">Search</a></li>
+                <li th:class="${#httpServletRequest.servletPath == '/newContent'} ? 'active' : ''"><a href="#" th:href="@{/newContent}">Add new content</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</html>

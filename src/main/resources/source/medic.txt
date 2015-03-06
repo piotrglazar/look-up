@@ -230,7 +230,7 @@ lutein ; luteina
 macula ; plamka
 macula lutea of the eye ; plamka żółta oka
 maintenance dose ; dawka podtrzymująca
-matrix patch ;plaster macierzowy
+matrix patch ; plaster macierzowy
 matrix transdermal system ; system macierzowy przezskórnego dostarczania leku
 maximal concentration ; maksymalne stężenie
 medical environment ; środowisko lekarskie
@@ -403,7 +403,7 @@ trough ; spadek
 twice daily ; dwa razy dziennie
 uncontrollable movements ; niekontrolowane ruchy
 unsatisfactory therapeutic effect ; niezadowalający efekt terapeutyczny
-upper arm ;górna część ramienia
+upper arm ; górna część ramienia
 upper back ; górne części pleców
 urethane ; uretan
 urinary incontinence ; nietrzymanie moczu

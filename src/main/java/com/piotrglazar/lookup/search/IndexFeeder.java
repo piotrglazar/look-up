@@ -25,15 +25,19 @@ public class IndexFeeder {
     }
 
     public List<Document> feed() {
-        return getLinesFromSourceFile().stream()
+        return feed(getLinesFromSourceFile(), ";");
+    }
+
+    public List<Document> feed(List<String> source, String separator) {
+        return source.stream()
                 .filter(line -> !line.isEmpty())
-                .filter(line -> line.contains(";"))
-                .map(line -> line.split(";"))
+                .filter(line -> line.contains(separator))
+                .map(line -> line.split(separator))
                 .map(this::buildDocument)
                 .collect(toList());
     }
 
-    private Document buildDocument(final String[] tokens) {
+    private Document buildDocument(String[] tokens) {
         return documentFactory.createDocument(tokens[0].trim(), tokens[1].trim());
     }
 

@@ -29,7 +29,6 @@ public class SearchController {
     @RequestMapping(method = RequestMethod.POST, value = "/search")
     public ModelAndView performSearch(SearchForm searchForm) {
         final Set<SearchResults> results = searcher.searchAll(searchForm.getQuery());
-        final ModelAndView modelAndView = new ModelAndView("search", ImmutableMap.of("searchResults", results));
-        return modelAndView;
+        return new ModelAndView("search", ImmutableMap.of("searchResults", results));
     }
 }
