@@ -1,5 +1,6 @@
 package com.piotrglazar.lookup.search;
 
+import com.piotrglazar.lookup.domain.SearchResults;
 import com.piotrglazar.lookup.utils.ConsoleReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

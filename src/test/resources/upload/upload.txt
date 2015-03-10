@@ -1,0 +1,4 @@
+cat ; kot
+dog ; pies
+bird ; ptak
+dog ; pies

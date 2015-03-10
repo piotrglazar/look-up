@@ -1,6 +1,9 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
-import org.apache.lucene.document.Document;
+import com.piotrglazar.lookup.TranslationDirection;
+import com.piotrglazar.lookup.domain.LookUpDocument;
+import com.piotrglazar.lookup.domain.SearchResults;
+import com.piotrglazar.lookup.search.Searcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,26 +33,26 @@ public class IndexUpdater {
         this.indexFeeder = indexFeeder;
     }
 
-    public void updateIndex(List<String> newContent, String separator) {
-        final List<Document> documents = indexFeeder.feed(newContent, separator);
+    public void updateIndex(List<String> newContent, String separator, TranslationDirection translationDirection) {
+        final List<LookUpDocument> documents = indexFeeder.feed(newContent, separator, translationDirection);
 
-        final Map<Boolean, List<Document>> groupedDocuments = documents.stream().collect(groupingBy(this::isNewDocument));
+        final Map<Boolean, List<LookUpDocument>> groupedDocuments = documents.stream().collect(groupingBy(this::isNewDocument));
 
         logDuplicatedEntries(groupedDocuments.getOrDefault(Boolean.FALSE, Collections.emptyList()));
         saveNewEntries(groupedDocuments.getOrDefault(Boolean.TRUE, Collections.emptyList()));
     }
 
-    private void saveNewEntries(final List<Document> documents) {
+    private void saveNewEntries(final List<LookUpDocument> documents) {
         lookUpIndex.addToIndex(documents);
     }
 
-    private void logDuplicatedEntries(final List<Document> documents) {
-        documents.stream().forEach(d -> LOG.info("{} - {} entry is already in index", d.get("english"), d.get("polish")));
+    private void logDuplicatedEntries(final List<LookUpDocument> documents) {
+        documents.stream().forEach(d -> LOG.info("{} - {} entry is already in index", d.getEnglish(), d.getPolish()));
     }
 
-    private boolean isNewDocument(Document document) {
-        String english = document.get("english");
-        String polish = document.get("polish");
+    private boolean isNewDocument(LookUpDocument document) {
+        String english = document.getEnglish();
+        String polish = document.getPolish();
         return hasNoResultsMatchingExactly(english, searcher.searchInEnglish(english), SearchResults::getEnglish)
                 && hasNoResultsMatchingExactly(polish, searcher.searchInPolish(polish), SearchResults::getPolish);
     }

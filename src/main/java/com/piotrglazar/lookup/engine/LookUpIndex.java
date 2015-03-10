@@ -1,7 +1,8 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
 import com.piotrglazar.lookup.configuration.FilePathResolver;
 import com.piotrglazar.lookup.configuration.IndexWriterConfigFactory;
+import com.piotrglazar.lookup.domain.LookUpDocument;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -45,10 +46,10 @@ public class LookUpIndex {
         }
     }
 
-    public void addToIndex(List<Document> documents) {
+    public void addToIndex(List<LookUpDocument> documents) {
         final IndexWriter indexWriter = getIndexWriter(filePathResolver, indexWriterConfigFactory);
 
-        documents.forEach(document -> addDocumentToIndex(indexWriter, document));
+        documents.forEach(document -> addDocumentToIndex(indexWriter, document.getDocument()));
 
         closeIndex(indexWriter);
         this.indexSearcher = buildSearchIndex();
