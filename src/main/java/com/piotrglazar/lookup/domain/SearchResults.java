@@ -1,4 +1,4 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.domain;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
@@ -20,8 +20,8 @@ public final class SearchResults implements Comparable<SearchResults> {
         this.score = score;
     }
 
-    public SearchResults(int index, DocumentWithScore document) {
-        this(index, document.getEnglish(), document.getPolish(), document.getScore());
+    public SearchResults(int index, LookUpDocument document, float score) {
+        this(index, document.getEnglish(), document.getPolish(), score);
     }
 
     public int getIndex() {

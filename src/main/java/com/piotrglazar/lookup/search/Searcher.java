@@ -1,5 +1,10 @@
 package com.piotrglazar.lookup.search;
 
+import com.piotrglazar.lookup.domain.LookUpDocument;
+import com.piotrglazar.lookup.domain.SearchResults;
+import com.piotrglazar.lookup.exceptions.DocumentFetchException;
+import com.piotrglazar.lookup.exceptions.SearchException;
+import com.piotrglazar.lookup.engine.LookUpIndex;
 import com.piotrglazar.lookup.utils.SequenceGenerator;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.queryparser.classic.ParseException;
@@ -17,6 +22,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import static com.piotrglazar.lookup.domain.LookUpDocument.ENGLISH_FIELD;
+import static com.piotrglazar.lookup.domain.LookUpDocument.POLISH_FIELD;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
@@ -33,12 +40,12 @@ public class Searcher {
     }
 
     public List<SearchResults> searchInEnglish(String rawQuery) {
-        final Query query = buildQuery("english", rawQuery);
+        final Query query = buildQuery(ENGLISH_FIELD, rawQuery);
         return search(query);
     }
 
     public List<SearchResults> searchInPolish(String rawQuery) {
-        final Query query = buildQuery("polish", rawQuery);
+        final Query query = buildQuery(POLISH_FIELD, rawQuery);
         return search(query);
     }
 
@@ -63,8 +70,7 @@ public class Searcher {
         performSearch(query, indexSearcher, collector);
         final SequenceGenerator sequenceGenerator = new SequenceGenerator();
         return Arrays.stream(collector.topDocs().scoreDocs)
-                .map(scoreDoc -> getDocumentWithScore(indexSearcher, scoreDoc))
-                .map(document -> new SearchResults(sequenceGenerator.next(), document))
+                .map(scoreDoc -> new SearchResults(sequenceGenerator.next(), getDocumentWithScore(indexSearcher, scoreDoc), scoreDoc.score))
                 .collect(toList());
     }
 
@@ -76,9 +82,9 @@ public class Searcher {
         }
     }
 
-    private DocumentWithScore getDocumentWithScore(IndexSearcher indexSearcher, ScoreDoc scoreDoc) {
+    private LookUpDocument getDocumentWithScore(IndexSearcher indexSearcher, ScoreDoc scoreDoc) {
         try {
-            return new DocumentWithScore(indexSearcher.doc(scoreDoc.doc), scoreDoc.score);
+            return new LookUpDocument(indexSearcher.doc(scoreDoc.doc));
         } catch (IOException e) {
             throw new DocumentFetchException(scoreDoc.doc, e);
         }

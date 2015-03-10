@@ -15,6 +15,7 @@
             <ul class="nav navbar-nav">
                 <li th:class="${#httpServletRequest.servletPath == '/search'} ? 'active' : ''"><a href="#" th:href="@{/search}">Search</a></li>
                 <li th:class="${#httpServletRequest.servletPath == '/newContent'} ? 'active' : ''"><a href="#" th:href="@{/newContent}">Add new content</a></li>
+                <li th:class="${#httpServletRequest.servletPath == '/newContentFile'} ? 'active' : ''"><a href="#" th:href="@{/newContentFile}">Add new content - file</a></li>
             </ul>
         </div>
     </div>

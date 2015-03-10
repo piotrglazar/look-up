@@ -4,7 +4,7 @@ buildscript {
     }
 	dependencies {
         classpath("org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1")
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
     }
 }
 
@@ -35,14 +35,14 @@ dependencies {
     compile("org.apache.lucene:lucene-queryparser:4.10.3")
     compile("com.google.guava:guava:18.0")
     // context
-    compile("org.springframework.boot:spring-boot-starter-web:1.2.1.RELEASE") {
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.2.RELEASE") {
         exclude module: "spring-boot-starter-tomcat"
     }
-    compile("org.springframework.boot:spring-boot-starter-jetty:1.2.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-jetty:1.2.2.RELEASE")
     // actuator
-    compile("org.springframework.boot:spring-boot-starter-actuator:1.2.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-actuator:1.2.2.RELEASE")
     // thymeleaf
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.2.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.2.2.RELEASE")
     // context-support
     compile("org.springframework:spring-context-support:4.1.4.RELEASE")
     // log
@@ -52,7 +52,7 @@ dependencies {
     compile("com.google.code.findbugs:jsr305:3.0.0")
     compile("com.nesscomputing.testing:findbugs-annotations:2.0.0")
 
-    testCompile("org.springframework.boot:spring-boot-starter-test:1.2.1.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.2.2.RELEASE")
     testCompile("junit:junit:4.12")
     testCompile("org.mockito:mockito-all:2.0.2-beta")
     testCompile("org.assertj:assertj-core:1.7.1")
@@ -73,7 +73,7 @@ idea {
 }
 
 jacoco {
-    toolVersion = '0.7.2.+'
+    toolVersion = '0.7.4.+'
 }
 
 jacocoTestReport {

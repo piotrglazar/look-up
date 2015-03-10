@@ -1,4 +1,4 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.exceptions;
 
 public class DocumentFetchException extends RuntimeException {
 

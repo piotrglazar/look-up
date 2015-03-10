@@ -1,7 +1,7 @@
 package com.piotrglazar.lookup.controllers;
 
 import com.google.common.collect.ImmutableMap;
-import com.piotrglazar.lookup.search.SearchResults;
+import com.piotrglazar.lookup.domain.SearchResults;
 import com.piotrglazar.lookup.search.Searcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

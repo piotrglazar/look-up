@@ -2,6 +2,7 @@ package com.piotrglazar.lookup.search;
 
 import com.google.common.collect.Lists;
 import com.piotrglazar.lookup.AbstractContextTest;
+import com.piotrglazar.lookup.domain.SearchResults;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class SearcherContextTest extends AbstractContextTest {
     @Test
     @Parameters({
             "droga | mode of administration - droga przyjmowania",
-            "przyp* | accidental overdose - przypadkowe przedawkowanie & memory retrieval - funkcja przypominania"
+            "przyp* | memory retrieval - funkcja przypominania & accidental overdose - przypadkowe przedawkowanie"
     })
     public void shouldSearchGivenTermsFromPolishToEnglish(String searchTerm, String rawResults) {
         // given

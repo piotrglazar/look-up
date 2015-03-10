@@ -10,6 +10,14 @@
             <input class="form-control" type="text" id="separator" th:field="*{separator}"/>
         </div>
         <div class="form-group">
+            <label for="direction">Direction</label>
+            <select id="direction" class="form-control" th:field="*{translationDirection}">
+                <option th:each="translationDirection : ${translationDirections}"
+                        th:value="${translationDirection}"
+                        th:text="${translationDirection.text}">Translation direction</option>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="content">New content</label>
             <textarea class="form-control" id="content" cols="50" rows="30" placeholder="Choose separator and provide new data" th:field="*{newContent}"></textarea>
         </div>
