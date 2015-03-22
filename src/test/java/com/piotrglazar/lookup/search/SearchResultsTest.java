@@ -33,4 +33,10 @@ public class SearchResultsTest {
         // then
         assertThat(searchResults).containsExactly(first, fourth, third, second);
     }
+
+    @Test
+    public void shouldProvideCustomToStringMessage() {
+        // expect
+        assertThat(new SearchResults(1, "dog", "pies", 3.14f).toString()).contains("1", "dog", "pies", "3.14");
+    }
 }

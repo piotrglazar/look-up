@@ -28,14 +28,14 @@ public class IndexUpdaterContextTest extends AbstractContextTest {
     @Test
     public void shouldAddNewContentToIndex() {
         // given
-        final List<String> rawDocuments = Lists.newArrayList("dog ; pies");
+        final List<String> rawDocuments = Lists.newArrayList("parrot ; papuga");
 
         // when
         indexUpdater.updateIndex(rawDocuments, SEPARATOR, ENGLISH_TO_POLISH);
 
         // then
-        final Set<SearchResults> dogSearch = searcher.searchAll("dog");
-        assertThat(dogSearch).hasSize(1).extracting("english", "polish").contains(new Tuple("dog", "pies"));
+        final Set<SearchResults> dogSearch = searcher.searchAll("parrot");
+        assertThat(dogSearch).hasSize(1).extracting("english", "polish").contains(new Tuple("parrot", "papuga"));
     }
 
     @Test

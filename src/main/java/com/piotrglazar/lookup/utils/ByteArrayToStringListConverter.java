@@ -10,7 +10,8 @@ import java.util.List;
 public class ByteArrayToStringListConverter {
 
     public List<String> convert(byte[] bytes) {
-        final String content = new String(bytes, Charsets.UTF_8);
+        String content = new String(bytes, Charsets.UTF_8);
+        content = content.replaceAll("\\r", "");
         return Splitter.on("\n").splitToList(content);
     }
 }
