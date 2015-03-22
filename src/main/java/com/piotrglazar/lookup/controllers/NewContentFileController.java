@@ -7,6 +7,7 @@ import com.piotrglazar.lookup.utils.ByteArrayToStringListConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -33,8 +34,14 @@ public class NewContentFileController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/newContentFile")
-    public String insertNewContent(@Valid NewContentFileForm newContentFileForm) throws IOException {
-        final List<String> content = converter.convert(newContentFileForm.getNewContent().getBytes());
+    public String insertNewContent(@Valid NewContentFileForm newContentFileForm, BindingResult bindingResult, Model model)
+            throws IOException {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("translationDirections", TranslationDirection.values());
+            return "newContentFile";
+        }
+        final byte[] bytes = newContentFileForm.getNewContent().getBytes();
+        final List<String> content = converter.convert(bytes);
         indexUpdater.updateIndex(content, newContentFileForm.getSeparator(), newContentFileForm.getTranslationDirection());
         return "redirect:/search";
     }

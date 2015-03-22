@@ -19,11 +19,18 @@
             </div>
             <div class="form-group">
                 <label for="content">New content</label>
+                <div th:if="${#fields.hasGlobalErrors()}" class="alert alert-danger" role="alert">
+                    <label class="control-label input-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">newContent error</label>
+                </div>
                 <input class="form-control" type="file" id="content" placeholder="Provide data file" th:field="*{newContent}"/>
             </div>
-        <span class="input-group-btn">
-            <button class="btn btn-success" type="submit">Go!</button>
-        </span>
+            <div class="form-group">
+                <label for="content">Override file encoding warnings</label>
+                <input type="checkbox" name="override" value="override" th:field="*{override}"/>
+            </div>
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="submit">Go!</button>
+            </span>
         </form>
     </div>
 </div>
