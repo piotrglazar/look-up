@@ -3,7 +3,6 @@ package com.piotrglazar.lookup.engine;
 import com.piotrglazar.lookup.TranslationDirection;
 import com.piotrglazar.lookup.domain.LookUpDocument;
 import com.piotrglazar.lookup.domain.SearchResults;
-import com.piotrglazar.lookup.search.Searcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +35,8 @@ public class IndexUpdater {
     public void updateIndex(List<String> newContent, String separator, TranslationDirection translationDirection) {
         final List<LookUpDocument> documents = indexFeeder.feed(newContent, separator, translationDirection);
 
-        final Map<Boolean, List<LookUpDocument>> groupedDocuments = documents.stream().collect(groupingBy(this::isNewDocument));
+        final Map<Boolean, List<LookUpDocument>> groupedDocuments = documents.stream()
+                .collect(groupingBy(this::isNewDocument));
 
         logDuplicatedEntries(groupedDocuments.getOrDefault(Boolean.FALSE, Collections.emptyList()));
         saveNewEntries(groupedDocuments.getOrDefault(Boolean.TRUE, Collections.emptyList()));
@@ -57,7 +57,8 @@ public class IndexUpdater {
                 && hasNoResultsMatchingExactly(polish, searcher.searchInPolish(polish), SearchResults::getPolish);
     }
 
-    private boolean hasNoResultsMatchingExactly(String source, List<SearchResults> searchResults, Function<SearchResults, String> mapper) {
+    private boolean hasNoResultsMatchingExactly(String source, List<SearchResults> searchResults,
+                                                Function<SearchResults, String> mapper) {
         return searchResults.stream().map(mapper).filter(source::equals).count() == 0;
     }
 }

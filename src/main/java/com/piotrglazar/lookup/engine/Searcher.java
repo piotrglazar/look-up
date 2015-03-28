@@ -1,14 +1,10 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
 import com.piotrglazar.lookup.domain.LookUpDocument;
 import com.piotrglazar.lookup.domain.SearchResults;
 import com.piotrglazar.lookup.exceptions.DocumentFetchException;
 import com.piotrglazar.lookup.exceptions.SearchException;
-import com.piotrglazar.lookup.engine.LookUpIndex;
 import com.piotrglazar.lookup.utils.SequenceGenerator;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -31,21 +27,21 @@ import static java.util.stream.Collectors.toSet;
 public class Searcher {
 
     private final LookUpIndex lookUpIndex;
-    private final StandardAnalyzer analyzer;
+    private final QueryBuilder queryBuilder;
 
     @Autowired
-    public Searcher(LookUpIndex lookUpIndex, StandardAnalyzer analyzer) {
-        this.analyzer = analyzer;
+    public Searcher(LookUpIndex lookUpIndex, QueryBuilder queryBuilder) {
         this.lookUpIndex = lookUpIndex;
+        this.queryBuilder = queryBuilder;
     }
 
     public List<SearchResults> searchInEnglish(String rawQuery) {
-        final Query query = buildQuery(ENGLISH_FIELD, rawQuery);
+        final Query query = queryBuilder.buildQuery(ENGLISH_FIELD, rawQuery);
         return search(query);
     }
 
     public List<SearchResults> searchInPolish(String rawQuery) {
-        final Query query = buildQuery(POLISH_FIELD, rawQuery);
+        final Query query = queryBuilder.buildQuery(POLISH_FIELD, rawQuery);
         return search(query);
     }
 
@@ -55,14 +51,6 @@ public class Searcher {
         return Stream.concat(english.stream(), polish.stream()).collect(toSet());
     }
 
-    private Query buildQuery(String keyField, String rawQuery) {
-        try {
-            return new QueryParser(keyField, analyzer).parse(rawQuery);
-        } catch (ParseException e) {
-            throw new SearchException(keyField, rawQuery, e);
-        }
-    }
-
     private List<SearchResults> search(Query query) {
         final IndexSearcher indexSearcher = lookUpIndex.getIndexSearcher();
         final TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
@@ -70,7 +58,8 @@ public class Searcher {
         performSearch(query, indexSearcher, collector);
         final SequenceGenerator sequenceGenerator = new SequenceGenerator();
         return Arrays.stream(collector.topDocs().scoreDocs)
-                .map(scoreDoc -> new SearchResults(sequenceGenerator.next(), getDocumentWithScore(indexSearcher, scoreDoc), scoreDoc.score))
+                .map(scoreDoc -> new SearchResults(sequenceGenerator.next(),
+                        getDocumentWithScore(indexSearcher, scoreDoc), scoreDoc.score))
                 .collect(toList());
     }
 
@@ -88,6 +77,11 @@ public class Searcher {
         } catch (IOException e) {
             throw new DocumentFetchException(scoreDoc.doc, e);
         }
+    }
+
+    public List<SearchResults> searchExact(String rawEnglishQuery, String rawPolishQuery) {
+        Query exactQuery = queryBuilder.buildExactQuery(rawEnglishQuery, rawPolishQuery);
+        return search(exactQuery);
     }
 
 }

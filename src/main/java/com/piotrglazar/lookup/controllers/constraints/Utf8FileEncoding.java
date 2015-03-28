@@ -1,4 +1,4 @@
-package com.piotrglazar.lookup.controllers.contraints;
+package com.piotrglazar.lookup.controllers.constraints;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

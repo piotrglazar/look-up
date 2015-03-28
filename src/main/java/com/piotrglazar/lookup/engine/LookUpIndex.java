@@ -3,11 +3,13 @@ package com.piotrglazar.lookup.engine;
 import com.piotrglazar.lookup.configuration.FilePathResolver;
 import com.piotrglazar.lookup.configuration.IndexWriterConfigFactory;
 import com.piotrglazar.lookup.domain.LookUpDocument;
+import com.piotrglazar.lookup.exceptions.DocumentDeleteException;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,15 +49,33 @@ public class LookUpIndex {
     }
 
     public void addToIndex(List<LookUpDocument> documents) {
-        final IndexWriter indexWriter = getIndexWriter(filePathResolver, indexWriterConfigFactory);
+        final IndexWriter indexWriter = getIndexWriter();
 
         documents.forEach(document -> addDocumentToIndex(indexWriter, document.getDocument()));
 
+        closeWriterAndUpdateSearcher(indexWriter);
+    }
+
+    public IndexSearcher getIndexSearcher() {
+        return indexSearcher;
+    }
+
+    public void delete(Query deleteQuery) {
+        IndexWriter indexWriter = getIndexWriter();
+        try {
+            indexWriter.deleteDocuments(deleteQuery);
+        } catch (IOException e) {
+            throw new DocumentDeleteException(deleteQuery.toString(), e);
+        }
+        closeWriterAndUpdateSearcher(indexWriter);
+    }
+
+    private void closeWriterAndUpdateSearcher(IndexWriter indexWriter) {
         closeIndex(indexWriter);
         this.indexSearcher = buildSearchIndex();
     }
 
-    private IndexWriter getIndexWriter(FilePathResolver filePathResolver, IndexWriterConfigFactory indexWriterConfigFactory) {
+    private IndexWriter getIndexWriter() {
         try {
             return new IndexWriter(filePathResolver.getIndexFsDirectory(), indexWriterConfigFactory.indexWriterConfig());
         } catch (IOException e) {
@@ -70,10 +90,6 @@ public class LookUpIndex {
         } catch (IOException e) {
             throw new IllegalStateException("Failed to create index reader", e);
         }
-    }
-
-    public IndexSearcher getIndexSearcher() {
-        return indexSearcher;
     }
 
     private void addDocumentToIndex(final IndexWriter writer, final Document document) {

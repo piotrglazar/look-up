@@ -1,9 +1,8 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
 import com.google.common.collect.Lists;
 import com.piotrglazar.lookup.AbstractContextTest;
 import com.piotrglazar.lookup.domain.SearchResults;
-import com.piotrglazar.lookup.engine.IndexUpdater;
 import org.assertj.core.groups.Tuple;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

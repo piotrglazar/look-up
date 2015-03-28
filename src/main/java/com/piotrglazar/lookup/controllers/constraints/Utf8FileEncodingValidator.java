@@ -1,4 +1,4 @@
-package com.piotrglazar.lookup.controllers.contraints;
+package com.piotrglazar.lookup.controllers.constraints;
 
 import com.piotrglazar.lookup.controllers.forms.NewContentFileForm;
 import com.piotrglazar.lookup.utils.EncodingDetector;

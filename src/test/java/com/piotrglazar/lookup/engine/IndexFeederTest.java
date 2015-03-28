@@ -1,11 +1,10 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
 import com.google.common.collect.Lists;
 import com.piotrglazar.lookup.TranslationDirection;
 import com.piotrglazar.lookup.configuration.FilePathResolver;
 import com.piotrglazar.lookup.domain.DocumentFactory;
 import com.piotrglazar.lookup.domain.LookUpDocument;
-import com.piotrglazar.lookup.engine.IndexFeeder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -2,7 +2,7 @@ package com.piotrglazar.lookup.controllers;
 
 import com.piotrglazar.lookup.AbstractContextTest;
 import com.piotrglazar.lookup.controllers.forms.NewContentForm;
-import com.piotrglazar.lookup.search.Searcher;
+import com.piotrglazar.lookup.engine.Searcher;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;

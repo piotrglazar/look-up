@@ -1,7 +1,6 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.domain;
 
 import com.google.common.collect.Lists;
-import com.piotrglazar.lookup.domain.SearchResults;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 

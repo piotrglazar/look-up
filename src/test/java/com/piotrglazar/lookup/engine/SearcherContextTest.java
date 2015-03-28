@@ -1,4 +1,4 @@
-package com.piotrglazar.lookup.search;
+package com.piotrglazar.lookup.engine;
 
 import com.google.common.collect.Lists;
 import com.piotrglazar.lookup.AbstractContextTest;
