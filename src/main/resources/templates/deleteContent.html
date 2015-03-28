@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shards/head :: head"></head>
+<body>
+<div>
+    <div th:replace="shards/navbar :: navigation"></div>
+    <div class="container">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">Delete query:</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="search" th:action="@{/deleteContent}" method="post" class="form-inline">
+                    <div class="form-group">
+                        <label for="english">English:</label>
+                        <input type="text" id="english" name="english" th:value="${english}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="polish">Polish:</label>
+                        <input type="text" id="polish" name="polish" th:value="${polish}"/>
+                    </div>
+                    <button type="submit" style="border: none;padding: 0; background:none"><span class="glyphicon glyphicon-refresh"></span></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">Results to delete:</h3>
+            </div>
+            <div class="panel-body" th:if="${!(#lists.isEmpty(resultsToDelete))}">
+                <table id="deleteContent" class="table table-striped">
+                    <tr>
+                        <th>English</th>
+                        <th>Polish</th>
+                    </tr>
+                    <tr class="searchResult" th:each="result : ${resultsToDelete}">
+                        <td th:text="${result.english}">English</td>
+                        <td th:text="${result.polish}">Polish</td>
+                    </tr>
+                </table>
+                <form role="form" id="delete" th:action="@{/doDeleteContent}" method="post">
+                    <input type="hidden" name="english" th:value="${english}"/>
+                    <input type="hidden" name="polish" th:value="${polish}"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="submit">Delete all</button>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

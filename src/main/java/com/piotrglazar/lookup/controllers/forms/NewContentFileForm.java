@@ -1,7 +1,7 @@
 package com.piotrglazar.lookup.controllers.forms;
 
 import com.piotrglazar.lookup.TranslationDirection;
-import com.piotrglazar.lookup.controllers.contraints.Utf8FileEncoding;
+import com.piotrglazar.lookup.controllers.constraints.Utf8FileEncoding;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 

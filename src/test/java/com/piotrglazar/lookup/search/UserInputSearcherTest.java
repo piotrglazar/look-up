@@ -1,5 +1,6 @@
 package com.piotrglazar.lookup.search;
 
+import com.piotrglazar.lookup.engine.Searcher;
 import com.piotrglazar.lookup.utils.ConsoleReader;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.junit.Test;

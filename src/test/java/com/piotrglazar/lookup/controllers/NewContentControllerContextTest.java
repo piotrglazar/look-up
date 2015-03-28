@@ -4,7 +4,7 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.piotrglazar.lookup.AbstractContextTest;
 import com.piotrglazar.lookup.controllers.forms.NewContentForm;
-import com.piotrglazar.lookup.search.Searcher;
+import com.piotrglazar.lookup.engine.Searcher;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

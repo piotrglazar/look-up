@@ -29,11 +29,19 @@
                     <th>English</th>
                     <th>Polish</th>
                     <th class="col-lg-1">Score</th>
+                    <th class="col-lg-1"></th>
                 </tr>
                 <tr class="searchResult" th:each="result : ${searchResults}">
                     <td th:text="${result.english}">English</td>
                     <td th:text="${result.polish}">Polish</td>
                     <td class="col-lg-1" th:text="${result.score}">Score</td>
+                    <td>
+                        <form role="form" id="delete" th:action="@{/deleteContent}" method="post" enctype="application/x-www-form-urlencoded">
+                            <input type="hidden" name="english" th:value="${result.english}"/>
+                            <input type="hidden" name="polish" th:value="${result.polish}"/>
+                            <button type="submit" style="border: none;padding: 0; background:none"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>
