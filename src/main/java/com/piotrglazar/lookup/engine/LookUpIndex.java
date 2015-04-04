@@ -22,10 +22,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+import static com.piotrglazar.lookup.domain.LookUpDocument.ENGLISH_FIELD;
+import static com.piotrglazar.lookup.domain.LookUpDocument.POLISH_FIELD;
+
 @Component
 public class LookUpIndex {
 
     private static final Logger LOG = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+    private static final Logger BACKUP_LOG = LoggerFactory.getLogger("INDEX-BACKUP");
 
     private final FilePathResolver filePathResolver;
     private final IndexWriterConfigFactory indexWriterConfigFactory;
@@ -92,7 +96,8 @@ public class LookUpIndex {
         }
     }
 
-    private void addDocumentToIndex(final IndexWriter writer, final Document document) {
+    private void addDocumentToIndex(IndexWriter writer, Document document) {
+        BACKUP_LOG.info("{} ; {}", document.get(ENGLISH_FIELD), document.get(POLISH_FIELD));
         try {
             writer.addDocument(document);
         } catch (IOException e) {
