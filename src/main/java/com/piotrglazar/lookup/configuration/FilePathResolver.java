@@ -47,7 +47,7 @@ public class FilePathResolver {
 
     public FSDirectory getIndexFsDirectory() {
         try {
-            return FSDirectory.open(new File(getIndexDirectory()));
+            return FSDirectory.open(new File(getIndexDirectory()).toPath());
         } catch (IOException e) {
             throw new IllegalStateException("Failed to open index directory for writing", e);
         }

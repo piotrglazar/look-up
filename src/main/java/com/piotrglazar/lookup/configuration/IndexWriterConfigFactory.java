@@ -16,6 +16,6 @@ public class IndexWriterConfigFactory {
     }
 
     public IndexWriterConfig indexWriterConfig() {
-        return new IndexWriterConfig(ApplicationConfiguration.version(), standardAnalyzer);
+        return new IndexWriterConfig(standardAnalyzer);
     }
 }

@@ -53,7 +53,7 @@ public class Searcher {
 
     private List<SearchResults> search(Query query) {
         final IndexSearcher indexSearcher = lookUpIndex.getIndexSearcher();
-        final TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
+        final TopScoreDocCollector collector = TopScoreDocCollector.create(5);
 
         performSearch(query, indexSearcher, collector);
         final SequenceGenerator sequenceGenerator = new SequenceGenerator();
